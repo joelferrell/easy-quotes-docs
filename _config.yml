@@ -1,0 +1,31 @@
+# GitHub Pages builds this repo with Jekyll. Settings → Pages → Source:
+# "Deploy from a branch", branch main, folder / (root) — the pages are at the
+# repo root, not in a docs/ subfolder.
+title: Easy Quotes
+description: Let shoppers build a quote request and turn it into a Shopify draft order.
+
+# just-the-docs gives the sidebar nav and search without a local build.
+# GitHub Pages allowlists jekyll-remote-theme, so nothing needs installing.
+remote_theme: just-the-docs/just-the-docs
+
+# A project site is served from https://<user>.github.io/<repo>/, so baseurl
+# must be "/<repo>" or every link and stylesheet 404s. This repo is
+# easy-quotes-docs, so the site lands at
+# https://joelferrell.github.io/easy-quotes-docs/. Empty it only if you move to
+# a user/org site (<user>.github.io) or point a custom domain here.
+baseurl: "/easy-quotes-docs"
+
+# Pages would otherwise be served as /getting-started.html, and every link in
+# these docs uses /getting-started/. "pretty" makes Jekyll write the directory
+# form, so both agree.
+permalink: pretty
+
+search_enabled: true
+heading_anchors: true
+color_scheme: light
+
+
+# Jekyll would otherwise try to build the app itself.
+exclude:
+  - node_modules
+  - vendor
