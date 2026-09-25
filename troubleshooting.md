@@ -27,7 +27,7 @@ product it's for.
   not in a standalone section above or below it.
 - **In a product grid** — on themes that don't accept app blocks in product
   cards, use the grid snippet instead. See
-  [Theme setup]({{ site.baseurl }}/theme-setup/).
+  [Theme setup]({{ '/theme-setup/' | relative_url }}).
 - **Anywhere else** — pick a product in the block's own settings.
 
 In the theme editor, a block that can't work out its product says so in place of
@@ -72,6 +72,27 @@ You have both a block and a snippet for it on the same page. The snippet wins
 and the block is hidden automatically, so this shouldn't happen — but if it
 does, remove one. The theme editor flags the hidden block with a note.
 
+## A quote arrived but I wasn't emailed
+
+Check the address under **Advanced features → Notifications** first. If it's
+set and nothing arrived, the app's email provider isn't configured or its
+sending domain isn't verified — that's on the app's side rather than yours, so
+get in touch.
+
+Quotes are never lost to this: the request is recorded in the app and the draft
+order is created either way.
+
+## GA4 isn't recording quote events
+
+If you filled in a measurement ID, Easy Quotes only loads GA4 once the shopper
+has consented, via Shopify's Customer Privacy API — and never at all on a theme
+with no privacy API. See
+[Advanced features]({{ '/advanced-features/' | relative_url }}).
+
+If GA4 already loads through Google Tag Manager or the Google & YouTube channel,
+leave the measurement ID blank; the events are sent regardless, and a second
+copy would double-count them.
+
 ## I changed a setting and the storefront hasn't caught up
 
 Settings publish to your storefront when you save. Reload the storefront page
@@ -80,8 +101,11 @@ page once more.
 
 ## Still stuck
 
-Email **[help@canonicalscale.com](mailto:help@canonicalscale.com)**, or use
-Support inside the app. Have this ready and it'll go much faster:
+Open **Support** in the app — it has the same answers plus a few more, and the
+links to jump straight to the page that fixes them. Or email
+**[help@canonicalscale.com](mailto:help@canonicalscale.com)**.
+
+Have this ready and it'll go much faster:
 
 - Your store's theme and whether the element is a block or a snippet
 - The page URL it happens on

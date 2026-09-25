@@ -49,6 +49,7 @@ results and recommendations — with no code.
 snippet instead. Paste it into your product card snippet (Dawn:
 `snippets/card-product.liquid`):
 
+{% raw %}
 ```liquid
 <div
   data-easy-quotes="add_to_quote"
@@ -57,6 +58,7 @@ snippet instead. Paste it into your product card snippet (Dawn:
   data-button-text="Add to quote"
 ></div>
 ```
+{% endraw %}
 
 Two notes on that one:
 

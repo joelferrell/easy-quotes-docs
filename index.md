@@ -29,18 +29,18 @@ own shipping and tax rules.
 
 ## What to read next
 
-- **[Getting started]({{ site.baseurl }}/getting-started/)** — install, turn on
+- **[Getting started]({{ '/getting-started/' | relative_url }})** — install, turn on
   the app embed, create the quote page, add the button.
-- **[Theme setup]({{ site.baseurl }}/theme-setup/)** — app blocks, snippets, and
+- **[Theme setup]({{ '/theme-setup/' | relative_url }})** — app blocks, snippets, and
   getting the button into a collection grid.
-- **[The form builder]({{ site.baseurl }}/form-builder/)** — fields, sections,
+- **[The form builder]({{ '/form-builder/' | relative_url }})** — fields, sections,
   conditional logic, and the screens shoppers see after submitting.
-- **[Design]({{ site.baseurl }}/design/)** — colours, buttons, the header link,
+- **[Design]({{ '/design/' | relative_url }})** — colours, buttons, the header link,
   the mini quote, and custom CSS.
-- **[Settings]({{ site.baseurl }}/settings/)** — who can quote, hiding prices,
+- **[Settings]({{ '/settings/' | relative_url }})** — who can quote, hiding prices,
   tags, notifications, webhooks and analytics.
-- **[Advanced features]({{ site.baseurl }}/advanced-features/)** — email
+- **[Advanced features]({{ '/advanced-features/' | relative_url }})** — email
   notifications, Klaviyo, webhooks and Google Analytics.
-- **[Plans]({{ site.baseurl }}/plans/)** — what each plan includes.
-- **[Troubleshooting]({{ site.baseurl }}/troubleshooting/)** — when the button
+- **[Plans]({{ '/plans/' | relative_url }})** — what each plan includes.
+- **[Troubleshooting]({{ '/troubleshooting/' | relative_url }})** — when the button
   doesn't appear, or appears and does nothing.

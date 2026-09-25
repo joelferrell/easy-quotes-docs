@@ -37,13 +37,13 @@ quote** block near your Add to cart button.
 
 On themes built on theme blocks — Horizon and later — you can also drop the
 block inside a **product card** and it works in every grid. See
-[Theme setup]({{ site.baseurl }}/theme-setup/).
+[Theme setup]({{ '/theme-setup/' | relative_url }}).
 
 ## 4. Build your form
 
 **Easy Quotes → Forms.** A starter form exists already, with the contact and
 address fields most stores want. Add your own questions, then use **Preview** to
-see what shoppers get. See [The form builder]({{ site.baseurl }}/form-builder/).
+see what shoppers get. See [The form builder]({{ '/form-builder/' | relative_url }}).
 
 ## Try it end to end
 
@@ -51,5 +51,14 @@ Add a product to a quote, submit the form, then look in **Shopify → Orders →
 Drafts**. Your request should be there, tagged, with the answers on it.
 
 If the draft order doesn't appear, go to
-[Troubleshooting]({{ site.baseurl }}/troubleshooting/) — that page covers the
-usual causes in the order they're worth checking.
+[Troubleshooting]({{ '/troubleshooting/' | relative_url }}) — that page covers
+the usual causes in the order they're worth checking.
+
+## Then what
+
+Set where new quote requests are emailed under **Advanced features →
+Notifications**, and style the button and mini quote under **Design**.
+
+**Support** inside the app has the common questions with links straight to the
+page that fixes each one, and you can reach a human at
+[help@canonicalscale.com](mailto:help@canonicalscale.com).

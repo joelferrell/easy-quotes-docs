@@ -60,6 +60,6 @@ subscribed in Shopify, with their consent recorded properly.
 ## Where the integrations went
 
 Email notifications, Klaviyo, webhooks and Google Analytics live on their own
-page now — **[Advanced features]({{ site.baseurl }}/advanced-features/)**. They
+page now — **[Advanced features]({{ '/advanced-features/' | relative_url }})**. They
 are wired up once and then left alone, so they were pushed below the settings
 you change week to week.
