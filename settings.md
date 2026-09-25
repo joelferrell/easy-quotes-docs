@@ -57,23 +57,9 @@ snippet.
 Add email and SMS opt-in checkboxes to your quote form. Anyone who ticks one is
 subscribed in Shopify, with their consent recorded properly.
 
-## Webhooks (Pro)
+## Where the integrations went
 
-Every submitted quote is POSTed as flat JSON to a URL you choose — a Zapier
-catch hook, Make, or your own endpoint. It runs after the draft order exists, so
-the payload has everything.
-
-The URL must be `https`. **Send test** posts a real-shaped payload marked
-`quote.test`, so the receiving app can learn your fields before a real quote
-arrives. Failures are recorded and shown here, and can never affect a shopper.
-
-## Analytics
-
-Quote events fire on **every** plan as DOM events on `window`, so your theme or
-tag manager can listen for them:
-
-`easyquotes:add_to_quote`, `remove_from_quote`, `view_quote`, `quote_submitted`,
-`cart_converted_to_quote`.
-
-Each carries GA4-shaped `items`, `value` and `currency`. On Pro the same events
-are also pushed to `dataLayer` and `gtag()`.
+Email notifications, Klaviyo, webhooks and Google Analytics live on their own
+page now — **[Advanced features]({{ site.baseurl }}/advanced-features/)**. They
+are wired up once and then left alone, so they were pushed below the settings
+you change week to week.

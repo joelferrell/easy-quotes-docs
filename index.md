@@ -39,6 +39,8 @@ own shipping and tax rules.
   the mini quote, and custom CSS.
 - **[Settings]({{ site.baseurl }}/settings/)** — who can quote, hiding prices,
   tags, notifications, webhooks and analytics.
+- **[Advanced features]({{ site.baseurl }}/advanced-features/)** — email
+  notifications, Klaviyo, webhooks and Google Analytics.
 - **[Plans]({{ site.baseurl }}/plans/)** — what each plan includes.
 - **[Troubleshooting]({{ site.baseurl }}/troubleshooting/)** — when the button
   doesn't appear, or appears and does nothing.

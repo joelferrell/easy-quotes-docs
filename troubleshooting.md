@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting
-nav_order: 8
+nav_order: 9
 ---
 
 # Troubleshooting
@@ -80,7 +80,8 @@ page once more.
 
 ## Still stuck
 
-Have this ready and it'll go much faster:
+Email **[help@canonicalscale.com](mailto:help@canonicalscale.com)**, or use
+Support inside the app. Have this ready and it'll go much faster:
 
 - Your store's theme and whether the element is a block or a snippet
 - The page URL it happens on

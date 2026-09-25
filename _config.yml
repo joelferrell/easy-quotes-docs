@@ -13,7 +13,8 @@ remote_theme: just-the-docs/just-the-docs
 # easy-quotes-docs, so the site lands at
 # https://joelferrell.github.io/easy-quotes-docs/. Empty it only if you move to
 # a user/org site (<user>.github.io) or point a custom domain here.
-baseurl: "/easy-quotes-docs"
+# baseurl: "/easy-quotes-docs"
+baseurl: "https://easy-quotes.canonicalscale.com"
 
 # Pages would otherwise be served as /getting-started.html, and every link in
 # these docs uses /getting-started/. "pretty" makes Jekyll write the directory
