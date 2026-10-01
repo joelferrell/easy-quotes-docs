@@ -25,7 +25,8 @@ where a customer expects a conversation before a number.
 5. You set the prices and send the invoice from Shopify as usual.
 
 Nothing bypasses Shopify. The shopper pays through your own checkout, with your
-own shipping and tax rules.
+own shipping and tax rules — and the draft order is always priced from your
+current Shopify prices, never from whatever the shopper's browser was holding.
 
 ## What to read next
 

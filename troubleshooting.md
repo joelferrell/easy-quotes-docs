@@ -93,6 +93,35 @@ If GA4 already loads through Google Tag Manager or the Google & YouTube channel,
 leave the measurement ID blank; the events are sent regardless, and a second
 copy would double-count them.
 
+## The draft order total doesn't match what the shopper saw
+
+Easy Quotes always prices a draft order from your **current** Shopify prices. The
+line items it sends carry only the product and the quantity, so Shopify works out
+the value itself at the moment the quote is submitted.
+
+The shopper's quote is kept in their browser, and it can sit there for days. So
+that the two don't drift apart, Easy Quotes re-checks every item against your
+store when the quote page or the mini quote opens: prices are brought up to
+date, and any line whose price has changed since it was added says so under the
+product name. Items that are no longer for sale are flagged there too, so they
+can be removed before the form is filled in.
+
+Two things can still put a gap between the figures:
+
+- **A price changed in the last few moments** — between the shopper opening the
+  page and pressing submit. The draft order gets the new price, which is the
+  safer way round: a shopper's browser can't set what a draft order is worth.
+- **The check couldn't run.** If a product can't be read — a dropped connection,
+  say — Easy Quotes deliberately leaves that line showing the price the shopper
+  already saw rather than blanking it or blocking the quote.
+
+Nothing is wrong when this happens, and you're setting the final price before you
+send the invoice anyway. If it's still causing awkward conversations:
+
+- Let quotes expire sooner (**Settings → Quote validity**), so fewer sit around
+  across a price change.
+- Say so on your quote page — that prices are confirmed when you reply.
+
 ## I changed a setting and the storefront hasn't caught up
 
 Settings publish to your storefront when you save. Reload the storefront page
@@ -110,3 +139,50 @@ Have this ready and it'll go much faster:
 - Your store's theme and whether the element is a block or a snippet
 - The page URL it happens on
 - Anything logged in your browser console on that page
+
+## A customer is missing their phone number, or SMS marketing is off
+
+Shopify won't let two customers share a phone number. If a shopper requests a
+quote using a number that already belongs to another customer, Easy Quotes
+creates the customer **without** the phone — and because Shopify needs a phone
+on the customer before it will accept SMS marketing consent, the SMS opt-in
+can't be applied either, even if the shopper ticked it.
+
+The number isn't lost: it's on the draft order, so you can still call them.
+
+The **Quote details** card on the draft order tells you when this happened,
+under "Some details couldn't be saved". To fix it, find the other customer with
+that number and remove or correct it, then add the number to the right
+customer.
+
+This is most common while testing, when several test quotes reuse one phone
+number.
+
+## Easy Quotes won't accept my Slack webhook URL
+
+It has to be an **incoming webhook**, which starts with
+`https://hooks.slack.com/services/`.
+
+Slack's **Workflow Builder** produces `/triggers/` and `/workflows/` URLs
+instead. Those are a different API and won't work here. Create the webhook from
+your Slack app under **Incoming Webhooks → Add New Webhook to Workspace**.
+
+## A quote came in, but nothing reached Slack or HubSpot
+
+Work through these in order:
+
+1. **Check your plan.** Both are Pro features. Below Pro the section shows an
+   upgrade notice instead of the field, and your saved credential is kept, not
+   deleted — upgrading restores it.
+2. **Check it's saved**, not just typed. Slack's *Send test* button is disabled
+   until you save, because it sends the stored URL.
+3. **Use *Send test*** for Slack. If the test lands but real quotes don't,
+   the quote itself is failing — check **Quotes** in the app.
+4. **For HubSpot**, look the shopper's email up in your CRM. If the contact is
+   there but the quote isn't on its timeline, the note failed; the app records
+   that as "contact only". That usually means the private app is missing the
+   `crm.objects.notes.write` scope.
+
+Neither integration can delay or fail a quote, so a shopper never sees an error
+from them. That also means a silent failure is possible — which is why the test
+button exists.

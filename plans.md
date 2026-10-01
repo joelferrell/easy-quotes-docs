@@ -33,7 +33,7 @@ Not included: more than one form, mini quote styles beyond the slide-in drawer,
 more than one language, conditional fields, cart-to-quote, marketing opt-ins,
 radio and checkbox fields, and Klaviyo.
 
-## Pro — $90/month
+## Pro — $32/month
 
 Everything in Base, plus:
 
@@ -46,9 +46,34 @@ Everything in Base, plus:
 - Convert cart to quote
 - Webhooks to Zapier, Make or your own endpoint
 - Klaviyo events and custom notifications
+- Slack: a message in your channel the moment a quote arrives
+- HubSpot: the shopper and their quote pushed into your CRM
 - Multi-language forms
 - Analytics to `dataLayer` and `gtag()`
+- File upload fields: let shoppers attach drawings, specs or photos
 - Dedicated onboarding and setup
+
+## Lifetime — $700 once
+
+Everything in Pro, paid once. No monthly bill and nothing to cancel, including
+every future Pro feature.
+
+It's a single charge on your Shopify invoice rather than a subscription, so it
+doesn't appear in your app subscriptions list — Shopify shows it as a one-time
+app purchase. Buy it from **Plans** in the app.
+
+## File uploads
+
+A **File upload** field lets a shopper attach a file to their quote — a
+drawing, a spec sheet, a photo of the space.
+
+Files go into your own **Shopify Files** (Content → Files), so they're yours
+and they stay after the quote is closed. A link to each one appears on the
+draft order, in the **Quote details** card.
+
+Limits: 20 MB per file, one file per field (add more fields for more files).
+Accepted types are images, PDF, plain text, CSV and Word/Excel documents —
+nothing that can run.
 
 ## Changing plan
 

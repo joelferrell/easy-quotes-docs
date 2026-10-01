@@ -38,6 +38,28 @@ button. A snippet takes precedence over the matching block on the same page, so
 nothing is ever shown twice — and if you add both, the theme editor shows a note
 on the hidden block explaining why. Only you see that note.
 
+### Writing the quote link yourself
+
+The `easy_quotes_quote_link` placeholder is replaced by Easy Quotes' own link.
+If you'd rather keep your theme's icon and classes, write the anchor yourself
+and add **`data-easy-quotes-link`** to it:
+
+```liquid
+<a href="/pages/quote" data-easy-quotes-open data-easy-quotes-link class="header__icon">
+  …your theme's icon…
+  <span data-easy-quotes="quote_count"></span>
+</a>
+```
+
+That attribute is what tells Easy Quotes a quote link is already on the page, so
+the **Quote link block** and the app embed's automatic placement stand aside
+instead of adding a second one. Without it, your link is just a link as far as
+the app can tell, and you end up with two quote links in the header.
+
+`data-easy-quotes-open` on its own does **not** suppress them — it only makes
+something open the quote drawer, which you may well want on a footer link while
+the header block stays.
+
 ## Product grids
 
 **Theme blocks (Horizon and later).** Their product cards accept app blocks and

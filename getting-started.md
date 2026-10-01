@@ -17,6 +17,10 @@ storefront. **Nothing else works without it** — not the blocks, not the
 snippets. If quotes look entirely absent from your storefront, check this
 first.
 
+<div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.75; padding: 40px 0 40px 0;">
+  <iframe src="https://guides.canonicalscale.com/embed/cmupvko1g04fcqmmk2lqmh1jj?embed_v=2&utm_source=embed" loading="lazy" title="Configure Easy Quotes App on Shopify Theme" allow="clipboard-write" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
 While you're there, set **Quote link placement**: next to your cart icon, a
 floating button, or nothing at all if you'd rather place the link yourself.
 

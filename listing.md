@@ -110,7 +110,7 @@ the header to submit the form."*
 - Support email: **help@canonicalscale.com** (monitored — a bounced support
   address is a review failure, and the first thing a merchant tries)
 - Developer / company domain: **canonicalscale.com**
-- Documentation: **https://easy-quotes.canonicalscale.com/**
+- Documentation: **https://easy-quotes-docs.canonicalscale.com/**
 - Privacy policy URL on canonicalscale.com — required, and it must cover what
   the app stores: quote answers, customer email and name, and the merchant's own
   settings

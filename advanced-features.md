@@ -81,3 +81,90 @@ banner is usually a store that hasn't set one up, and loading a tracker for
 every visitor there would be your legal exposure, not ours. If you need GA4 in
 that situation, add a consent banner — Shopify's own privacy settings provide
 one — or load GA4 through your theme and leave this field blank.
+
+## Slack (Pro)
+
+Get a message in a channel the moment a quote arrives — who asked, what for,
+the total, and a button straight to the draft order.
+
+### Create the webhook
+
+1. Go to [api.slack.com/apps](https://api.slack.com/apps) and choose
+   **Create New App → From scratch**. Name it anything — "Easy Quotes" is fine
+   — and pick your workspace.
+2. In the left sidebar, open **Incoming Webhooks** and switch **Activate
+   Incoming Webhooks** on.
+3. Scroll down and choose **Add New Webhook to Workspace**.
+4. Pick the channel the quotes should land in, and **Allow**.
+5. Copy the webhook URL Slack shows you.
+
+### Connect it
+
+Paste the URL into **Advanced features → Slack** and **Save**. Then use **Send
+test** — it posts a sample quote to your channel straight away, so you can
+confirm the channel and the formatting before a real one arrives.
+
+The button stays disabled until you save, because it sends the saved URL rather
+than what's currently typed.
+
+> **Two Slack features look alike.** The URL must begin
+> `https://hooks.slack.com/services/`. Slack's **Workflow Builder** hands out
+> `/triggers/` and `/workflows/` URLs instead — a different API, which Easy
+> Quotes will refuse. If your URL is rejected, this is almost always why.
+
+### What the message contains
+
+The shopper's name, the total, the first ten items, and a button to the draft
+order. Longer quotes are truncated with "…and N more" rather than filling the
+channel.
+
+Form answers are deliberately left out — a channel isn't the place for a
+customer's full submission, and the draft order has all of it.
+
+### Changing the channel
+
+Webhooks are tied to one channel. To move the notifications, create a second
+webhook in Slack pointing at the new channel and paste that URL in instead.
+
+## HubSpot (Pro)
+
+Push each shopper into your CRM as a contact, with their quote attached to the
+timeline — so quotes live where the rest of your pipeline does.
+
+### Create the private app
+
+1. In HubSpot, open **Settings → Integrations → Private Apps** and choose
+   **Create a private app**.
+2. Name it (again, "Easy Quotes" is fine).
+3. On the **Scopes** tab, tick:
+   - `crm.objects.contacts.write`
+   - `crm.objects.notes.write`
+4. Create the app and copy its **access token**. It starts with `pat-`.
+
+### Connect it
+
+Paste the token into **Advanced features → HubSpot** and **Save**.
+
+There's no *Send test* button here on purpose: a test would create a real
+contact and a real note in your CRM. To check it, submit a quote on your own
+storefront and look that email up in HubSpot.
+
+### What happens on each quote
+
+Two things, in order:
+
+1. **The contact** is created or updated, matched on **email address** — so a
+   returning customer updates their existing record instead of creating a
+   duplicate. Name, phone and company are filled in when the shopper gave them.
+2. **A note** is attached to that contact's timeline with the items, every form
+   answer, and a link to the draft order in Shopify.
+
+If the contact saves but the note doesn't, the contact is kept — you still get
+the customer. The app records that as "contact only".
+
+### Neither can break a quote
+
+Slack and HubSpot both run *after* the quote is saved and the draft order
+created. If either is down, slow, or misconfigured, the quote still goes
+through and the shopper sees nothing wrong. The failure is logged for you
+instead.
