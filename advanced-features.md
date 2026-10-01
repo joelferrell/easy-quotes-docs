@@ -133,8 +133,8 @@ timeline — so quotes live where the rest of your pipeline does.
 
 ### Create the private app
 
-1. In HubSpot, open **Settings → Integrations → Private Apps** and choose
-   **Create a private app**.
+1. In HubSpot, open **Settings → Integrations → Private Apps → Keys → Service Keys** and choose
+   **Create service key**.
 2. Name it (again, "Easy Quotes" is fine).
 3. On the **Scopes** tab, tick:
    - `crm.objects.contacts.write`
