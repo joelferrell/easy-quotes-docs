@@ -74,7 +74,20 @@ capability a reviewer can verify in the app.
 2. Drag-and-drop quote form with sections and conditional fields
 3. Every request becomes a Shopify draft order with the answers attached
 4. Hide prices and Add to cart for trade-only or quote-only products
-5. Quote dashboard, email notifications, webhooks and Klaviyo
+5. Quote dashboard, email notifications, webhooks, Slack, HubSpot and Klaviyo
+
+## Security and data handling
+
+Worth stating plainly in the listing and in the App Store's data-handling
+questionnaire, because merchants connecting a CRM look for it:
+
+- Integration credentials — the Slack webhook URL, Klaviyo API key and HubSpot
+  token — are **encrypted at rest with AES-256-GCM**, not stored in plain text.
+- Quote data is removed when the app is uninstalled, via Shopify's `shop/redact`
+  compliance webhook, and a single customer's quotes are removed on
+  `customers/redact`.
+- Shopper attachments are uploaded straight into the merchant's own Shopify
+  Files. We never store the file contents.
 
 ## Search terms
 
@@ -111,9 +124,11 @@ the header to submit the form."*
   address is a review failure, and the first thing a merchant tries)
 - Developer / company domain: **canonicalscale.com**
 - Documentation: **https://easy-quotes-docs.canonicalscale.com/**
-- Privacy policy URL on canonicalscale.com — required, and it must cover what
-  the app stores: quote answers, customer email and name, and the merchant's own
-  settings
+- Privacy policy: **https://canonicalscale.com/legal** — the one authoritative
+  copy. It covers what the app stores (quote answers, customer email, name,
+  phone and address, and the merchant's own settings), the integrations data is
+  shared with, encryption at rest, and deletion on uninstall. The docs site's
+  `/privacy/` page is a pointer to it, not a second version.
 
 ---
 

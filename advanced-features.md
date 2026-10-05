@@ -136,9 +136,11 @@ timeline — so quotes live where the rest of your pipeline does.
 1. In HubSpot, open **Settings → Integrations → Private Apps → Keys → Service Keys** and choose
    **Create service key**.
 2. Name it (again, "Easy Quotes" is fine).
-3. On the **Scopes** tab, tick:
-   - `crm.objects.contacts.write`
-   - `crm.objects.notes.write`
+3. On the **Scopes** tab, tick `crm.objects.contacts.write`.
+
+   That single scope is all you need. HubSpot's Notes API runs on the contacts
+   scope, so there is no `crm.objects.notes.write` to look for — ticking write
+   also enables read, which the contact upsert needs.
 4. Create the app and copy its **access token**. It starts with `pat-`.
 
 ### Connect it
@@ -161,6 +163,18 @@ Two things, in order:
 
 If the contact saves but the note doesn't, the contact is kept — you still get
 the customer. The app records that as "contact only".
+
+### Your keys are encrypted
+
+Your Slack webhook URL, Klaviyo API key and HubSpot token are encrypted with
+AES-256-GCM before they're written to our database, and only decrypted at the
+moment a quote is sent to that service. Nobody — including us — can read them
+out of a database backup.
+
+One consequence worth knowing: because they're stored encrypted rather than
+hashed, we can still show them back to you on the Advanced features page, but
+if a key is ever reported as unreadable, paste it again rather than trying to
+repair it.
 
 ### Neither can break a quote
 
