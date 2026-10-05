@@ -23,13 +23,16 @@ it is the URL to quote if a customer or a reviewer asks where the policy is.
   forms, translations and settings.
 - **Your integration credentials are encrypted at rest.** Slack, Klaviyo and
   HubSpot keys are encrypted with AES-256-GCM before they are stored. See
-  [Advanced features](/advanced-features/).
+  [Advanced features]({{ '/advanced-features/' | relative_url }}).
 - **Attachments go into your own Shopify Files.** We never keep a copy of the
   contents.
 - **Nothing is sent to an integration you have not switched on**, using your own
   credentials.
 - **You can delete any quote yourself** from the Quotes page. That removes it
   from Easy Quotes and leaves the Shopify draft order alone.
+- **You can set a retention window.** Quotes are kept forever by default;
+  **Settings → Data retention** lets you have them deleted automatically after a
+  number of days. Draft orders are never affected.
 
 Questions about any of this, or a request to access or delete personal
 information: [help@canonicalscale.com](mailto:help@canonicalscale.com). We
