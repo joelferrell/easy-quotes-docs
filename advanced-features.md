@@ -1,6 +1,6 @@
 ---
 title: Advanced features
-nav_order: 7
+nav_order: 8
 ---
 
 # Advanced features
@@ -12,21 +12,9 @@ and these are plumbing.
 
 ## Notifications
 
-**Send new quote notifications to** — where each new request is emailed. Replies
-go straight to the shopper who asked, so hitting reply in your mail client
-starts the conversation.
-
-On **Pro** you also get:
-
-- **Also send to** — extra recipients, comma separated. Everyone named gets the
-  one email, not one each.
-- **Subject line** — your own, with tokens filled in per quote:
-  {% raw %}`{{customer_name}}`, `{{customer_email}}`, `{{order_name}}`,
-  `{{quote_id}}`, `{{item_count}}`, `{{total}}`, `{{shop}}`{% endraw %}. Leave
-  it empty for the default. An unknown token is refused when you save, and the
-  message names the ones that work.
-- **Opening note** — a line for your team above the quote summary. The shopper
-  never sees it.
+Who hears about a quote, what the emails look like, the quote you send a
+customer for approval, and sending from your own domain all live on their own
+page now: [Notifications]({{ '/notifications/' | relative_url }}).
 
 ## Klaviyo (Pro)
 
@@ -100,17 +88,12 @@ the total, and a button straight to the draft order.
 
 ### Connect it
 
-Paste the URL into **Advanced features → Slack** and **Save**. Then use **Send
-test** — it posts a sample quote to your channel straight away, so you can
-confirm the channel and the formatting before a real one arrives.
+Paste the URL into **Notifications → Slack** and **Save**, then **Send a test**
+to check it lands in the right channel.
 
-The button stays disabled until you save, because it sends the saved URL rather
-than what's currently typed.
-
-> **Two Slack features look alike.** The URL must begin
-> `https://hooks.slack.com/services/`. Slack's **Workflow Builder** hands out
-> `/triggers/` and `/workflows/` URLs instead — a different API, which Easy
-> Quotes will refuse. If your URL is rejected, this is almost always why.
+The message wording — including notifying a channel with `<!here>` — is set on
+the same page. See
+[Notifications]({{ '/notifications/' | relative_url }}).
 
 ### What the message contains
 
